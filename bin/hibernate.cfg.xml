@@ -1,0 +1,27 @@
+<hibernate-configuration>
+	<session-factory>
+		
+		<!-- JDBC CONNECTION DETAILS -->
+		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property> <!-- For Mysql connector above 8 -->
+		<property name="connection.url">jdbc:mysql://localhost:3306/hibernate_manytomany?useSSL=false&amp;serverTimezone=UTC</property>
+		<property name="connection.username">hibernate</property>
+		<property name="connection.password">hibernate</property>
+		
+		<!-- GIVE THE DIALECT -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property> 
+		
+		<!-- Echo the SQL queries -->
+		<property name="show_sql">true</property>
+		<property name="hibernate.format_sql">true</property> 
+		
+		<!-- How you want to execute the application -->
+		<property name="hbm2ddl.auto">update</property> <!-- Value can be create/validate/update/create-drop -->
+		
+		<!-- JDBC CONNECTION POOL SETTING -->
+		<property name="connection.pool_size">1</property>
+		
+		<!-- Set the current session context -->
+		<property name="current_session_context_class">thread</property>
+		
+	</session-factory>
+</hibernate-configuration>
